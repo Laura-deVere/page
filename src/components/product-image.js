@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 export default class ProductImage extends Component {
-	
+	onImageZoom(visibilty) {
+    this.props.handleOverLayVisibility(visibilty);
+    console.log('hello');
+  }
 
 	render() {
-		return (
+		return (  
 			<div className="product-image-scroll">
-        <div className="img-container">
+        <div className="img-container" onClick={()=> this.onImageZoom('visible')} >
           <div className="img-1"></div>
           <div className="img-2"></div>
           <div className="img-3"></div>
